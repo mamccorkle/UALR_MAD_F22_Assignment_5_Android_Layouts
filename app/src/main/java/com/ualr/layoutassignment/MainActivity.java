@@ -23,7 +23,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.ualr.layoutassignment.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
+
+    // Add the binder:
+    private ActivityMainBinding binding;
 
     // TODO 02. Create a new method called "calculateTotal" for calculating the invoice's total amount of money
 
@@ -32,5 +37,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
     }
+
 }
