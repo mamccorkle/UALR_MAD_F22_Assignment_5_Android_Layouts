@@ -14,13 +14,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
+        <!-- Chip Group -->
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chipGroup"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="2dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -83,6 +84,7 @@
 
         </com.google.android.material.chip.ChipGroup>
 
+        <!-- Pulse Data CardView Group -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardViewBuyNow"
             style="@style/CardView.White"
@@ -102,12 +104,146 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
+
+
+                <Button
+                    android:id="@+id/btnBuyNow"
+                    style="@style/AppTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/buy_now"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvPulseData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pulsa_amp_data"
+                    app:layout_constraintStart_toEndOf="@+id/ivPulseData"
+                    app:layout_constraintTop_toTopOf="@+id/ivPulseData" />
+
+                <ImageView
+                    android:id="@+id/ivPulseData"
+                    android:layout_width="48sp"
+                    android:layout_height="48sp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/pulsa_amp_data"
+                    app:layout_constraintEnd_toStartOf="@+id/tvPulseData"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_phone_android" />
+
+                <TextView
+                    android:id="@+id/tvPulseDataExtra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bonus_pulsa_50"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivPulseData"
+                    app:layout_constraintStart_toEndOf="@+id/ivPulseData" />
+
+                <ImageView
+                    android:id="@+id/ivElectric"
+                    android:layout_width="48sp"
+                    android:layout_height="48sp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:contentDescription="@string/electric"
+                    app:layout_constraintEnd_toStartOf="@+id/ivCashOut"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivPulseData"
+                    app:srcCompat="@drawable/ic_lightbulb" />
+
+                <TextView
+                    android:id="@+id/tvElectric"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/electric"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/ivElectric"
+                    app:layout_constraintStart_toStartOf="@+id/ivElectric"
+                    app:layout_constraintTop_toBottomOf="@+id/ivElectric" />
+
+                <ImageView
+                    android:id="@+id/ivCashOut"
+                    android:layout_width="48sp"
+                    android:layout_height="48sp"
+                    android:contentDescription="@string/cashout"
+                    app:layout_constraintEnd_toStartOf="@+id/ivGames"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/ivElectric"
+                    app:layout_constraintTop_toTopOf="@+id/ivElectric"
+                    app:srcCompat="@drawable/ic_monetization_on" />
+
+                <TextView
+                    android:id="@+id/tvCashOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/cashout"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/ivCashOut"
+                    app:layout_constraintStart_toStartOf="@+id/ivCashOut"
+                    app:layout_constraintTop_toBottomOf="@+id/ivCashOut" />
+
+                <ImageView
+                    android:id="@+id/ivGames"
+                    android:layout_width="48sp"
+                    android:layout_height="48sp"
+                    android:contentDescription="@string/games"
+                    app:layout_constraintEnd_toStartOf="@+id/ivSeeAll"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/ivCashOut"
+                    app:layout_constraintTop_toTopOf="@+id/ivCashOut"
+                    app:srcCompat="@drawable/ic_games" />
+
+                <TextView
+                    android:id="@+id/tvGames"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/games"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/ivGames"
+                    app:layout_constraintStart_toStartOf="@+id/ivGames"
+                    app:layout_constraintTop_toBottomOf="@+id/ivGames" />
+
+                <ImageView
+                    android:id="@+id/ivSeeAll"
+                    android:layout_width="48sp"
+                    android:layout_height="48sp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/see_all"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/ivGames"
+                    app:layout_constraintTop_toTopOf="@+id/ivGames"
+                    app:srcCompat="@drawable/ic_more_horiz" />
+
+                <TextView
+                    android:id="@+id/tvSeeAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/see_all"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/ivSeeAll"
+                    app:layout_constraintStart_toStartOf="@+id/ivSeeAll"
+                    app:layout_constraintTop_toBottomOf="@+id/ivSeeAll" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
 
+        <!-- Discount Group -->
         <LinearLayout
             android:id="@+id/toggleGroupDiscount"
             android:layout_width="match_parent"
@@ -120,32 +256,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardViewBuyNow">
 
-            <!--            <com.google.android.material.button.MaterialButtonToggleGroup app:singleSelection="true">-->
-
-            <!--                <com.google.android.material.button.MaterialButton-->
-            <!--                    android:id="@+id/textButton2"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:text="Text button 2">-->
-
-            <!--                </com.google.android.material.button.MaterialButton>-->
-            <!--                <Button-->
-            <!--                    android:id="@+id/button7"-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:text="Button7" />-->
-            <!--                <Button-->
-            <!--                    android:id="@+id/button8"-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:text="Button8" />-->
-            <!--                <Button-->
-            <!--                    android:id="@+id/button9"-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:text="Button9" />-->
-            <!--            </com.google.android.material.button.MaterialButtonToggleGroup>-->
-
             <com.google.android.material.button.MaterialButtonToggleGroup
                 android:id="@+id/toggle_button_group"
                 android:layout_width="wrap_content"
@@ -157,6 +267,7 @@
                     style="@style/Button.Blue.Group"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:checked="true"
                     android:text="@string/toggle_no_discount" />
 
                 <com.google.android.material.button.MaterialButton
@@ -170,6 +281,7 @@
 
         </LinearLayout>
 
+        <!-- Invoice Data CardView Group -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardViewInvoice"
             style="@style/CardView.White"
@@ -189,44 +301,251 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:paddingBottom="16sp">
+
+                <TextView
+                    android:id="@+id/tvInvoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/invoice"
+                    app:layout_constraintStart_toStartOf="@+id/dividerInvoice"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivRefresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/refresh"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_swap_vert" />
+
+                <View
+                    android:id="@+id/dividerInvoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvInvoice" />
+
+                <CheckBox
+                    android:id="@+id/cbProduct01"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+
+                    android:text="@string/product01"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/tilProduct01"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tilProduct01" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilProduct01"
+
+                    android:layout_width="96sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/dividerInvoice">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tietProduct01"
+                        style="@style/TextInputLayout.Blue"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:hint="@string/dollar_symbol"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/cbProduct02"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="8dp"
+
+                    android:text="@string/product02"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/tilProduct02"
+                    app:layout_constraintEnd_toStartOf="@+id/tilProduct02"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tilProduct02" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilProduct02"
+
+                    android:layout_width="96sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/cbProduct02"
+                    app:layout_constraintTop_toBottomOf="@+id/tilProduct01">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tietProduct02"
+                        style="@style/TextInputLayout.Blue"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:hint="@string/dollar_symbol"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/cbProduct03"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+
+                    android:text="@string/product03"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/tilProduct03"
+                    app:layout_constraintEnd_toStartOf="@+id/tilProduct03"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tilProduct03" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilProduct03"
+
+                    android:layout_width="96sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/cbProduct03"
+                    app:layout_constraintTop_toBottomOf="@+id/tilProduct02">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tietProduct03"
+                        style="@style/TextInputLayout.Blue"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:hint="@string/dollar_symbol"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/cbProduct04"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+
+                    android:text="@string/product04"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/tilProduct04"
+                    app:layout_constraintEnd_toStartOf="@+id/tilProduct04"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tilProduct04" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilProduct04"
+
+                    android:layout_width="96sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/cbProduct04"
+                    app:layout_constraintTop_toBottomOf="@+id/tilProduct03">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tietProduct04"
+                        style="@style/TextInputLayout.Blue"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:hint="@string/dollar_symbol"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
 
-        <LinearLayout
-            android:id="@+id/total_group"
-            android:layout_width="match_parent"
-            android:layout_height="0sp"
-            android:layout_marginStart="64dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="64dp"
-            android:orientation="vertical"
+        <!-- Total Group -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="32dp"
+            android:paddingBottom="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardViewInvoice">
 
             <com.google.android.material.button.MaterialButton
-                style="@style/Button.Blue.Borderless"
+                android:id="@+id/materialButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/calculate_total_btn" >
-
+                android:layout_marginStart="24dp"
+                android:text="@string/calculate_total_btn"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSum"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvSum">
 
 
             </com.google.android.material.button.MaterialButton>
 
-            <com.google.android.material.textfield.TextInputLayout
+            <TextView
+                android:id="@+id/tvSum"
+                style="@style/TextInputLayout.Blue"
+                android:layout_width="50dp"
+                android:layout_height="21dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/_00_00"
+                android:textAlignment="textEnd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/calculate_total_text_view">
+                android:layout_marginEnd="8dp"
+                android:text="@string/calculate_total_text_view"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSum"
+                app:layout_constraintEnd_toStartOf="@+id/tvSum"
+                app:layout_constraintTop_toTopOf="@+id/tvSum" />
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -45,6 +45,13 @@
         <item name="android:ems">10</item>
     </style>
 
+    <style name="TextInputLayout.Blue" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="backgroundColor">@color/overlay_light_90</item>
+        <item name="textFillColor">@color/overlay_dark_90</item>
+        <item name="android:ems">10</item>
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+    </style>
+
     <style name="Button.Outlined.White" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="backgroundTint">@android:color/white</item>
     </style>
