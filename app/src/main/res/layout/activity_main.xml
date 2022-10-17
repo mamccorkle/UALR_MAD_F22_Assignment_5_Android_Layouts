@@ -2,6 +2,7 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,9 +20,9 @@
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chipGroup"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="@dimen/spacing_8_zero"
+            android:layout_marginStart="@dimen/spacing_xsmall"
+            android:layout_marginTop="@dimen/spacing_8_medium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -31,8 +32,8 @@
                 style="@style/Chip.Blue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="0dp"
-                android:layout_marginBottom="1dp"
+                android:layout_marginStart="@dimen/spacing_8_zero"
+                android:layout_marginBottom="@dimen/spacing_yo_im_tiny"
                 android:text="@string/scan_chip"
                 app:chipIcon="@drawable/ic_center_focus_weak_chip"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -45,8 +46,8 @@
                 style="@style/Chip.Blue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="0dp"
-                android:layout_marginBottom="1dp"
+                android:layout_marginStart="@dimen/spacing_8_zero"
+                android:layout_marginBottom="@dimen/spacing_yo_im_tiny"
                 android:text="@string/top_up_chip"
                 app:chipIcon="@drawable/ic_add_circle_outline_chip"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -59,8 +60,8 @@
                 style="@style/Chip.Blue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="0dp"
-                android:layout_marginBottom="1dp"
+                android:layout_marginStart="@dimen/spacing_8_zero"
+                android:layout_marginBottom="@dimen/spacing_yo_im_tiny"
                 android:text="@string/send_chip"
                 app:chipIcon="@drawable/ic_open_in_new_chip"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -73,8 +74,8 @@
                 style="@style/Chip.Blue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="0dp"
-                android:layout_marginBottom="1dp"
+                android:layout_marginStart="@dimen/spacing_8_zero"
+                android:layout_marginBottom="@dimen/spacing_yo_im_tiny"
                 android:text="@string/request_chip"
                 app:chipIcon="@drawable/ic_open_in_new_rotated_chip"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -90,17 +91,17 @@
             style="@style/CardView.White"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="@dimen/spacing_8_small"
+            android:layout_marginTop="@dimen/spacing_8_medium"
             android:layout_marginEnd="8dp"
-            app:cardCornerRadius="2sp"
-            app:cardElevation="8sp"
+            app:cardCornerRadius="@dimen/spacing_xsmall"
 
-            app:contentPadding="8sp"
+            app:cardElevation="@dimen/spacing_8_small"
 
+            app:contentPadding="@dimen/spacing_8_small"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chipGroup" >
+            app:layout_constraintTop_toBottomOf="@+id/chipGroup">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -112,8 +113,8 @@
                     style="@style/AppTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="@dimen/spacing_8_small"
+                    android:layout_marginEnd="@dimen/spacing_8_small"
                     android:text="@string/buy_now"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -128,10 +129,10 @@
 
                 <ImageView
                     android:id="@+id/ivPulseData"
-                    android:layout_width="48sp"
-                    android:layout_height="48sp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_width="@dimen/spacing_8_xlarge2"
+                    android:layout_height="@dimen/spacing_8_xlarge2"
+                    android:layout_marginStart="@dimen/spacing_8_small"
+                    android:layout_marginTop="@dimen/spacing_8_small"
                     android:contentDescription="@string/pulsa_amp_data"
                     app:layout_constraintEnd_toStartOf="@+id/tvPulseData"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -144,15 +145,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/bonus_pulsa_50"
-                    app:layout_constraintBottom_toBottomOf="@+id/ivPulseData"
-                    app:layout_constraintStart_toEndOf="@+id/ivPulseData" />
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@+id/ivPulseData"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPulseData" />
 
                 <ImageView
                     android:id="@+id/ivElectric"
-                    android:layout_width="48sp"
-                    android:layout_height="48sp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_width="@dimen/spacing_8_xlarge2"
+                    android:layout_height="@dimen/spacing_8_xlarge2"
+                    android:layout_marginStart="@dimen/spacing_8_small"
+                    android:layout_marginTop="@dimen/spacing_8_large"
                     android:contentDescription="@string/electric"
                     app:layout_constraintEnd_toStartOf="@+id/ivCashOut"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -165,7 +168,7 @@
                     android:id="@+id/tvElectric"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="@dimen/spacing_8_small"
                     android:text="@string/electric"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/ivElectric"
@@ -174,8 +177,8 @@
 
                 <ImageView
                     android:id="@+id/ivCashOut"
-                    android:layout_width="48sp"
-                    android:layout_height="48sp"
+                    android:layout_width="@dimen/spacing_8_xlarge2"
+                    android:layout_height="@dimen/spacing_8_xlarge2"
                     android:contentDescription="@string/cashout"
                     app:layout_constraintEnd_toStartOf="@+id/ivGames"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -187,7 +190,7 @@
                     android:id="@+id/tvCashOut"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="@dimen/spacing_8_small"
                     android:text="@string/cashout"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/ivCashOut"
@@ -196,8 +199,8 @@
 
                 <ImageView
                     android:id="@+id/ivGames"
-                    android:layout_width="48sp"
-                    android:layout_height="48sp"
+                    android:layout_width="@dimen/spacing_8_xlarge2"
+                    android:layout_height="@dimen/spacing_8_xlarge2"
                     android:contentDescription="@string/games"
                     app:layout_constraintEnd_toStartOf="@+id/ivSeeAll"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -209,7 +212,7 @@
                     android:id="@+id/tvGames"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="@dimen/spacing_8_small"
                     android:text="@string/games"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/ivGames"
@@ -218,9 +221,9 @@
 
                 <ImageView
                     android:id="@+id/ivSeeAll"
-                    android:layout_width="48sp"
-                    android:layout_height="48sp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_width="@dimen/spacing_8_xlarge2"
+                    android:layout_height="@dimen/spacing_8_xlarge2"
+                    android:layout_marginEnd="@dimen/spacing_8_small"
                     android:contentDescription="@string/see_all"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -232,7 +235,7 @@
                     android:id="@+id/tvSeeAll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="@dimen/spacing_8_small"
                     android:text="@string/see_all"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/ivSeeAll"
@@ -247,10 +250,10 @@
         <LinearLayout
             android:id="@+id/toggleGroupDiscount"
             android:layout_width="match_parent"
-            android:layout_height="0sp"
-            android:layout_marginStart="64dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="64dp"
+            android:layout_height="@dimen/spacing_8_zero"
+            android:layout_marginStart="@dimen/spacing_8_xxlarge"
+            android:layout_marginTop="@dimen/spacing_8_medium"
+            android:layout_marginEnd="@dimen/spacing_8_xxlarge"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -287,13 +290,13 @@
             style="@style/CardView.White"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            app:cardCornerRadius="2sp"
-            app:cardElevation="8sp"
+            android:layout_marginStart="@dimen/spacing_8_small"
+            android:layout_marginTop="@dimen/spacing_8_medium"
+            android:layout_marginEnd="@dimen/spacing_8_small"
+            app:cardCornerRadius="@dimen/spacing_xsmall"
+            app:cardElevation="@dimen/spacing_8_small"
 
-            app:contentPadding="8sp"
+            app:contentPadding="@dimen/spacing_8_small"
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -302,14 +305,14 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="16sp">
+                android:paddingBottom="@dimen/spacing_8_medium">
 
                 <TextView
                     android:id="@+id/tvInvoice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="@dimen/spacing_8_small"
+                    android:layout_marginTop="@dimen/spacing_8_small"
                     android:text="@string/invoice"
                     app:layout_constraintStart_toStartOf="@+id/dividerInvoice"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -318,8 +321,8 @@
                     android:id="@+id/ivRefresh"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="@dimen/spacing_medium2"
+                    android:layout_marginEnd="@dimen/spacing_8_small"
                     android:contentDescription="@string/refresh"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -328,8 +331,8 @@
                 <View
                     android:id="@+id/dividerInvoice"
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_height="@dimen/spacing_yo_im_tiny"
+                    android:layout_marginTop="@dimen/spacing_8_medium"
                     android:background="?android:attr/listDivider"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -340,7 +343,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="@dimen/spacing_8_small"
 
                     android:text="@string/product01"
 
@@ -352,10 +355,10 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilProduct01"
 
-                    android:layout_width="96sp"
+                    android:layout_width="@dimen/spacing_8_xxxlarge"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="@dimen/spacing_8_medium"
+                    android:layout_marginEnd="@dimen/spacing_8_small"
 
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/dividerInvoice">
@@ -377,7 +380,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="@dimen/spacing_8_small"
 
                     android:text="@string/product02"
 
@@ -391,10 +394,10 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilProduct02"
 
-                    android:layout_width="96sp"
+                    android:layout_width="@dimen/spacing_8_xxxlarge"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="@dimen/spacing_8_small"
+                    android:layout_marginEnd="@dimen/spacing_8_small"
 
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -417,7 +420,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="@dimen/spacing_8_small"
 
                     android:text="@string/product03"
 
@@ -431,10 +434,10 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilProduct03"
 
-                    android:layout_width="96sp"
+                    android:layout_width="@dimen/spacing_8_xxxlarge"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="@dimen/spacing_8_small"
+                    android:layout_marginEnd="@dimen/spacing_8_small"
 
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -457,7 +460,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="@dimen/spacing_8_small"
 
                     android:text="@string/product04"
 
@@ -471,10 +474,10 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilProduct04"
 
-                    android:layout_width="96sp"
+                    android:layout_width="@dimen/spacing_8_xxxlarge"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="@dimen/spacing_8_small"
+                    android:layout_marginEnd="@dimen/spacing_8_small"
 
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -498,11 +501,11 @@
 
         <!-- Total Group -->
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/spacing_8_zero"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="32dp"
-            android:paddingBottom="24sp"
+            android:layout_marginTop="@dimen/spacing_8_small"
+            android:layout_marginBottom="@dimen/spacing_8_xlarge"
+            android:paddingBottom="@dimen/spacing_8_large"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -512,7 +515,7 @@
                 android:id="@+id/materialButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/spacing_8_large"
                 android:text="@string/calculate_total_btn"
                 app:layout_constraintBottom_toBottomOf="@+id/tvSum"
                 app:layout_constraintStart_toStartOf="parent"
@@ -524,12 +527,14 @@
             <TextView
                 android:id="@+id/tvSum"
                 style="@style/TextInputLayout.Blue"
-                android:layout_width="50dp"
-                android:layout_height="21dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_width="@dimen/spacing_8_xlarge2"
+                android:layout_height="@dimen/spacing_8_large"
+                android:layout_marginTop="@dimen/spacing_8_large"
+                android:layout_marginEnd="@dimen/spacing_8_large"
                 android:text="@string/_00_00"
-                android:textAlignment="textEnd"
+
+
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -537,12 +542,11 @@
                 android:id="@+id/tvTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="@dimen/spacing_8_small"
                 android:text="@string/calculate_total_text_view"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/tvSum"
-                app:layout_constraintEnd_toStartOf="@+id/tvSum"
-                app:layout_constraintTop_toTopOf="@+id/tvSum" />
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvSum"
+                app:layout_constraintEnd_toStartOf="@+id/tvSum" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

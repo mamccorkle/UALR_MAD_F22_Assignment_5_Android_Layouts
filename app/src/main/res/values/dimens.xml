@@ -10,10 +10,22 @@
     <dimen name="viewpager_margin_overlap">-60dp</dimen>
     <dimen name="viewpager_margin_overlap_payment">-30dp</dimen>
 
+    <!-- By 8 Spacing -->
+    <dimen name="spacing_8_zero">0sp</dimen>
+    <dimen name="spacing_8_small">8sp</dimen>
+    <dimen name="spacing_8_medium">16sp</dimen>
+    <dimen name="spacing_8_large">24sp</dimen>
+    <dimen name="spacing_8_xlarge">32sp</dimen>
+    <dimen name="spacing_8_xlarge2">48sp</dimen>
+    <dimen name="spacing_8_xxlarge">64sp</dimen>
+    <dimen name="spacing_8_xxxlarge">96sp</dimen>
+
     <!--genaral spacing-->
+    <dimen name="spacing_yo_im_tiny">1dp</dimen>
     <dimen name="spacing_xsmall">2dp</dimen>
     <dimen name="spacing_small">3dp</dimen>
     <dimen name="spacing_medium">5dp</dimen>
+    <dimen name="spacing_medium2">6dp</dimen>
     <dimen name="spacing_xmedium">7dp</dimen>
     <dimen name="spacing_middle">10dp</dimen>
     <dimen name="spacing_large">15dp</dimen>
