@@ -2,6 +2,8 @@
 
 ## CPSC 3367 Assignment 5 Topics:
 
+<img src="file:///Users/decyple/Library/Application%20Support/marktext/images/2022-10-17-23-15-40-image.png" title="" alt="" data-align="center">
+
 > Android Application Development - Using Android Layouts
 
 #### Instructions:
