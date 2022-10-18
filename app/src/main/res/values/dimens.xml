@@ -18,6 +18,7 @@
     <dimen name="spacing_8_xlarge">32sp</dimen>
     <dimen name="spacing_8_xlarge2">48sp</dimen>
     <dimen name="spacing_8_xxlarge">64sp</dimen>
+    <dimen name="spacing_8_xxlarge2">72sp</dimen>
     <dimen name="spacing_8_xxxlarge">96sp</dimen>
 
     <!--genaral spacing-->

@@ -2,14 +2,10 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey_200">
-
-    <!-- TODO 01. Define the layout for the MainActivity here. -->
-    <!-- NOTE: Remember that in order to include some GUI components you will have to use the Material library -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -94,9 +90,9 @@
             android:layout_marginStart="@dimen/spacing_8_small"
             android:layout_marginTop="@dimen/spacing_8_medium"
             android:layout_marginEnd="8dp"
-            app:cardCornerRadius="@dimen/spacing_xsmall"
+            app:cardCornerRadius="@dimen/card_corner_radius"
 
-            app:cardElevation="@dimen/spacing_8_small"
+            app:cardElevation="@dimen/card_elevation"
 
             app:contentPadding="@dimen/spacing_8_small"
             app:layout_constraintEnd_toEndOf="parent"
@@ -146,7 +142,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/bonus_pulsa_50"
                     android:textColor="@color/colorAccent"
-                    android:textSize="10sp"
+                    android:textSize="11sp"
                     app:layout_constraintStart_toEndOf="@+id/ivPulseData"
                     app:layout_constraintTop_toBottomOf="@+id/tvPulseData" />
 
@@ -271,14 +267,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="true"
-                    android:text="@string/toggle_no_discount" />
+                    android:text="@string/toggle_no_discount"
+                    android:onClick="calculateTotal" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnDiscount"
                     style="@style/Button.Blue.Group"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/toggle_discount" />
+                    android:text="@string/toggle_discount"
+                    android:onClick="calculateTotal" />
 
             </com.google.android.material.button.MaterialButtonToggleGroup>
 
@@ -293,8 +291,8 @@
             android:layout_marginStart="@dimen/spacing_8_small"
             android:layout_marginTop="@dimen/spacing_8_medium"
             android:layout_marginEnd="@dimen/spacing_8_small"
-            app:cardCornerRadius="@dimen/spacing_xsmall"
-            app:cardElevation="@dimen/spacing_8_small"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation"
 
             app:contentPadding="@dimen/spacing_8_small"
 
@@ -512,7 +510,7 @@
             app:layout_constraintTop_toBottomOf="@+id/cardViewInvoice">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/materialButton"
+                android:id="@+id/btnCalculateTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/spacing_8_large"
@@ -527,14 +525,14 @@
             <TextView
                 android:id="@+id/tvSum"
                 style="@style/TextInputLayout.Blue"
-                android:layout_width="@dimen/spacing_8_xlarge2"
+                android:layout_width="@dimen/spacing_8_xxlarge2"
                 android:layout_height="@dimen/spacing_8_large"
                 android:layout_marginTop="@dimen/spacing_8_large"
                 android:layout_marginEnd="@dimen/spacing_8_large"
                 android:text="@string/_00_00"
 
 
-
+                android:textAlignment="textEnd"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -545,6 +543,7 @@
                 android:layout_marginEnd="@dimen/spacing_8_small"
                 android:text="@string/calculate_total_text_view"
                 android:textStyle="bold"
+                android:textAlignment="textEnd"
                 app:layout_constraintBaseline_toBaselineOf="@+id/tvSum"
                 app:layout_constraintEnd_toStartOf="@+id/tvSum" />
 

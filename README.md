@@ -6,12 +6,14 @@
 
 #### Instructions:
 
-:x::heavy_check_mark:  
+> :heavy_check_mark: TODO 01. Define the layout for the MainActivity here.
 
-> :heavy_check_mark: TODO 01. Define the layout for the MainActivity here.<br>
-> :x: TODO 02. Create a new method called "calculateTotal" for calculating the invoice's total amount of money.<br>
-> :x: TODO 03. Bind the "calculateTotal" method to the button with the "CALCULATE TOTAL" label.<br>
+> :heavy_check_mark: TODO 02. Create a new method called "calculateTotal" for calculating the invoice's total amount of money.
+
+> :heavy_check_mark: TODO 03. Bind the "calculateTotal" method to the button with the "CALCULATE TOTAL" label.
 
 #### Submission Due Date:
 
->  Source Due: Monday, October 14, 2022 11:59 PM
+>  Source Due: Monday, October 17, 2022 11:59 PM
+
+

@@ -12,7 +12,7 @@
     <string name="invoice">INVOICE</string>
     <string name="calculate_total_btn">calculate total</string>
     <string name="calculate_total_text_view">Total:</string>
-    <string name="_00_00">00.00</string>
+    <string name="_00_00">$ 0.00</string>
     <string name="dollar_symbol">$</string>
     <string name="electric">Electric</string>
     <string name="cashout">Cashout</string>
@@ -23,4 +23,6 @@
     <string name="product03">Product 03</string>
     <string name="product04">Product 04</string>
     <string name="refresh">Refresh</string>
+    <string name="inactive">Sorry, this element is inactive due to a lack of funding..</string>
+    <string name="zero_value_warning">No product costs added or no products selected..</string>
 </resources>
