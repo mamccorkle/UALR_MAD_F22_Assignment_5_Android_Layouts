@@ -25,7 +25,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.textfield.TextInputLayout;
 import com.ualr.layoutassignment.databinding.ActivityMainBinding;
 
 import java.text.DecimalFormat;
