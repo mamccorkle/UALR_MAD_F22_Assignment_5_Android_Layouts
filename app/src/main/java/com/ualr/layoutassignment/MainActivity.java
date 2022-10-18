@@ -25,6 +25,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputLayout;
 import com.ualr.layoutassignment.databinding.ActivityMainBinding;
 
 import java.text.DecimalFormat;
@@ -53,6 +54,12 @@ public class MainActivity extends AppCompatActivity {
 
         // Add button listener for the total calculations button:
         binding.btnCalculateTotal.setOnClickListener(this::calculateTotal);
+
+//        // Set up listeners for when the user has moved from on product to another so calculations can be performed:
+//        binding.tietProduct01.setOnFocusChangeListener((view, hasFocus) -> calculateTotal(view));
+//        binding.tietProduct02.setOnFocusChangeListener((view, hasFocus) -> calculateTotal(view));
+//        binding.tietProduct03.setOnFocusChangeListener((view, hasFocus) -> calculateTotal(view));
+//        binding.tietProduct04.setOnFocusChangeListener((view, hasFocus) -> calculateTotal(view));
     }
 
     public void calculateTotal(View view) {

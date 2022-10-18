@@ -358,6 +358,8 @@
                     android:layout_marginTop="@dimen/spacing_8_medium"
                     android:layout_marginEnd="@dimen/spacing_8_small"
 
+                    app:endIconMode="clear_text"
+
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/dividerInvoice">
 
@@ -369,7 +371,8 @@
                         android:layout_height="wrap_content"
 
                         android:hint="@string/dollar_symbol"
-                        android:inputType="numberDecimal" />
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <CheckBox
@@ -397,6 +400,8 @@
                     android:layout_marginTop="@dimen/spacing_8_small"
                     android:layout_marginEnd="@dimen/spacing_8_small"
 
+                    app:endIconMode="clear_text"
+
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/cbProduct02"
@@ -410,7 +415,8 @@
                         android:layout_height="wrap_content"
 
                         android:hint="@string/dollar_symbol"
-                        android:inputType="numberDecimal" />
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <CheckBox
@@ -437,6 +443,8 @@
                     android:layout_marginTop="@dimen/spacing_8_small"
                     android:layout_marginEnd="@dimen/spacing_8_small"
 
+                    app:endIconMode="clear_text"
+
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/cbProduct03"
@@ -450,7 +458,8 @@
                         android:layout_height="wrap_content"
 
                         android:hint="@string/dollar_symbol"
-                        android:inputType="numberDecimal" />
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <CheckBox
@@ -477,6 +486,8 @@
                     android:layout_marginTop="@dimen/spacing_8_small"
                     android:layout_marginEnd="@dimen/spacing_8_small"
 
+                    app:endIconMode="clear_text"
+
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/cbProduct04"
@@ -490,7 +501,8 @@
                         android:layout_height="wrap_content"
 
                         android:hint="@string/dollar_symbol"
-                        android:inputType="numberDecimal" />
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd" />
                 </com.google.android.material.textfield.TextInputLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -511,6 +523,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnCalculateTotal"
+                style="@style/Button.Outlined.White"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/spacing_8_large"
